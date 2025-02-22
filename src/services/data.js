@@ -4,6 +4,7 @@ export const useData = (name) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  console.log(process.env.REACT_APP_API_KEY);
 
   useEffect(() => {
     if (!name) return;
