@@ -1,38 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chicle&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Love+Ya+Like+A+Sister&display=swap');
+
+h1 {
+  color: white;
+  font-family: "Love Ya Like A Sister", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.AppLeft {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 40%;
+  background-color: #CA3C66;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.AppRight {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: #4AA3A2;
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filmDetails {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+  overflow: scroll;
+}
+
+.filmDetails h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  background-color: #CA3C66;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+.filmDetails .text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ffffff;
+  width: 70%;
+  text-align: justify;
+}
+
+.filmDetails img {
+  width: 20%;
+  height: auto;
+  margin : 20px;
 }
