@@ -47,7 +47,8 @@ function App() {
         {!loading && launched && data.length === 0 && <p>No film found</p>}
       </div>
       <div className="AppRight">
-        {selectedFilm && <DetailCard film={selectedFilm} />}
+        {selectedFilm && <DetailCard selectedFilm={selectedFilm} />}
+        {!selectedFilm && <p className="notSelected">No film selected</p>}
       </div>
     </div>
   );

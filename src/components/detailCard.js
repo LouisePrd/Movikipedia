@@ -1,6 +1,9 @@
 import "../assets/styles/detailCard.css";
 
 export default function detailCard({ selectedFilm }) {
+  if (!selectedFilm) {
+    return <p>Loading film details...</p>; // Afficher un message ou un loader
+  }
   return (
     <div className="filmDetails">
       <h2>{selectedFilm.title}</h2>
