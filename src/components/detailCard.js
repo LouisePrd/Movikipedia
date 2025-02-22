@@ -1,6 +1,6 @@
 import "../assets/styles/detailCard.css";
 
-export default function detailCard({ selectedFilm }) {
+export default function DetailCard({ selectedFilm }) {
   if (!selectedFilm) {
     return <p>Loading film details...</p>; // Afficher un message ou un loader
   }
@@ -17,7 +17,7 @@ export default function detailCard({ selectedFilm }) {
         <p>Popularity: {selectedFilm.popularity}</p>
         <p>{selectedFilm.overview}</p>
         <p>Release date: {selectedFilm.release_date}</p>
-        <p>Rating: {selectedFilm.vote_average}</p>
+        <p>{selectedFilm.vote_average} ⭐</p>
         <p>Vote count: {selectedFilm.vote_count}</p>
       </div>
     </div>
