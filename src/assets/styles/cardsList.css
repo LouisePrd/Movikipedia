@@ -31,7 +31,7 @@
     border-radius: 5px;
     font-weight: bold;
     text-align: justify;
-    width: 500px;
+    max-width: 500px;
 }
 
 
