@@ -3,14 +3,17 @@ import { useState, useEffect } from "react";
 export const useData = (name) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  // https://api.themoviedb.org/3/movie/550?api_key=4863270d28e58593edc422370d99221c
   useEffect(() => {
     if (!name) return;
-    const url =
-      "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1";
+    const api_key = process.env.REACT_APP_API_KEY;
+    const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(
+      name
+    )}&include_adult=false&language=en-US&page=1&api_key=${api_key}`;
     const fetchData = async () => {
+      setLoading(true);
+      setError(null);
       try {
         const response = await fetch(url, {
           method: "GET",
@@ -19,7 +22,7 @@ export const useData = (name) => {
           },
         });
         const json = await response.json();
-        setData(json);
+        setData(json.results);
         setLoading(false);
       } catch (error) {
         setError(error);
@@ -27,7 +30,7 @@ export const useData = (name) => {
       }
     };
     fetchData();
-  }, []);
+  }, [name]);
 
   return { data, error, loading };
 };
