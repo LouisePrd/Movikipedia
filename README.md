@@ -1,4 +1,4 @@
-# Study Case - Internship Fullstack Developer
+# Movikipedia Study Case - React
 
 The goal of this project is to create a simple movie browsing app in React.
 
