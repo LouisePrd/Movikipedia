@@ -1,5 +1,6 @@
 import "./App.css";
-import Cards from "./components/cards";
+import Cards from "./components/cardsList";
+import DetailCard from "./components/detailCard";
 import SearchBar from "./components/searchBar";
 import { useState } from "react";
 import { useData } from "./services/data";
@@ -46,24 +47,7 @@ function App() {
         {!loading && launched && data.length === 0 && <p>No film found</p>}
       </div>
       <div className="AppRight">
-        {selectedFilm && (
-          <div className="filmDetails">
-            <h2>{selectedFilm.title}</h2>
-            <img
-              src={`https://image.tmdb.org/t/p/w500${selectedFilm.poster_path}`}
-              alt={selectedFilm.title}
-            />
-            <div className="text">
-              <p>Original title: {selectedFilm.original_title}</p>
-              <p>Original language: {selectedFilm.original_language}</p>
-              <p>Popularity: {selectedFilm.popularity}</p>
-              <p>{selectedFilm.overview}</p>
-              <p>Release date: {selectedFilm.release_date}</p>
-              <p>Rating: {selectedFilm.vote_average}</p>
-              <p>Vote count: {selectedFilm.vote_count}</p>
-            </div>
-          </div>
-        )}
+        {selectedFilm && <DetailCard film={selectedFilm} />}
       </div>
     </div>
   );

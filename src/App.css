@@ -34,38 +34,3 @@ h1 {
   background-color: #4AA3A2;
   height: 100vh;
 }
-
-.filmDetails {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 50px;
-  overflow: scroll;
-}
-
-.filmDetails h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  color: #ffffff;
-  width: 100%;
-  text-align: center;
-  background-color: #CA3C66;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 0;
-}
-
-.filmDetails .text {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #ffffff;
-  width: 70%;
-  text-align: justify;
-}
-
-.filmDetails img {
-  width: 20%;
-  height: auto;
-  margin : 20px;
-}
