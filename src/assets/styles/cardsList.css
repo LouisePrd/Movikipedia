@@ -33,3 +33,11 @@
     text-align: justify;
     width: 500px;
 }
+
+
+@media (max-width: 768px) {
+    .cards {
+        max-height: 30vh;
+        margin-bottom: 20px;
+    }
+  }

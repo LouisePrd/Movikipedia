@@ -6,11 +6,12 @@
   }
   
   .search input {
-    width: 250px;
+    width: 280px;
     padding: 10px;
     border: 2px solid #4AA3A2;
     border-radius: 5px;
     margin-bottom: 10px;
+    font-size: 1.2rem;
   }
 
   p, button {
@@ -28,4 +29,16 @@
     cursor: pointer;
     margin-bottom: 20px;
     margin-top: 20px;
+    font-size: 1.2rem;
+  }
+
+
+  @media (max-width: 768px) {
+    .search input {
+      width: 200px;
+      margin-top: 0;
+    }
+    button {
+      margin-top: 10px;
+    }
   }

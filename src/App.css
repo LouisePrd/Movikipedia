@@ -5,7 +5,7 @@ h1 {
   font-family: "Love Ya Like A Sister", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .App {
@@ -14,7 +14,6 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100vw;
   height: 100vh;
 }
 
@@ -33,4 +32,32 @@ h1 {
   width: 60%;
   background-color: #4AA3A2;
   height: 100vh;
+}
+
+.notSelected {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  background-color: #CA3C66;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .AppLeft, .AppRight {
+    width: 100%;
+    min-height: 50vh;
+    height: auto;
+  }
+
+  .notSelected {
+    margin-top: 20px;
+  }
 }
