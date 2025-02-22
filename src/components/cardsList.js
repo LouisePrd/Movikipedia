@@ -1,4 +1,4 @@
-import "../assets/styles/cards.css";
+import "../assets/styles/cardsList.css";
 
 export default function Cards({ title, children }) {
     return (
